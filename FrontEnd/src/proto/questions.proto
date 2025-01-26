@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package questions;
+
+service QuestionService {
+  rpc LoadQuestions(LoadQuestionsRequest) returns (LoadQuestionsResponse);
+  rpc SearchQuestions(SearchRequest) returns (SearchResponse);
+}
+
+message LoadQuestionsRequest {
+  repeated Question questions = 1;
+}
+
+message LoadQuestionsResponse {
+  string status = 1;
+}
+
+message SearchRequest {
+  string query = 1;
+  int32 page = 2;
+  int32 pageSize = 3;
+  string filter = 4; // Add filter field
+}
+
+message SearchResponse {
+  repeated Question questions = 1;
+  int32 totalResults = 2;
+  int32 totalPages = 3;
+}
+
+message Question {
+  string id = 1;
+  string type = 2;
+  string title = 3;
+  string siblingId = 4;
+}
