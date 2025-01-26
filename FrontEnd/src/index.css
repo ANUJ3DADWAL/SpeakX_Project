@@ -1,0 +1,168 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .App {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+	color: #333;
+	min-height: 100%; /* Ensure the App component takes full height */
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .App > * {
+	flex: 1; /* Ensure children take available space */
+  }
+  .title {
+	font-size: 2em;
+	margin-bottom: 0.5em;
+  }
+  
+  .subtitle {
+	font-size: 1.2em;
+	margin-top: 0.2em;
+	margin-bottom: 1em;
+  }
+  
+  .subtitle span {
+	font-weight: bold;
+  }
+  .search-bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .search-input {
+	width: 50%; /* Adjusted width to match index.html */
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid #ccc;
+	border-right: none; /* Remove right border to merge with button */
+	border-radius: 4px 0 0 4px; /* Rounded corners on the left side */
+	outline: none;
+  }
+  
+  .search-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	color: white;
+	background-color: #ff5722;
+	border: 2px solid #ccc;
+	border-left: none; /* Remove left border to merge with input */
+	border-radius: 0 4px 4px 0; /* Rounded corners on the right side */
+	cursor: pointer;
+  }
+  
+  .search-button:hover {
+	background-color: #e64a19;
+  }
+  .tabs {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+  }
+  
+  .tab {
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 0 5px;
+  }
+  
+  .tab.active {
+	background-color: #ff5722;
+	color: white;
+  }
+  .results {
+	background: white;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	width: 80%; /* Adjust the width as needed */
+	margin: 20px auto; /* Center the results section */
+  }
+  
+  .result-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+	border-bottom: 1px solid #eee;
+  }
+  
+  .result-item:last-child {
+	border-bottom: none;
+  }
+  .result-item:hover {
+	background-color: #f1f1f1; /* Add hover effect */
+  }
+  .content h3 {
+	margin: 0 0 10px;
+	font-size: 18px;
+	color: #333;
+  }
+  
+  .content p {
+	margin: 0 0 5px;
+	font-size: 14px;
+	color: #666;
+  }
+  
+  .author {
+	font-size: 14px !important; /* Adjusted font size */
+	color: #999;
+	text-align: left; /* Move to the left */
+	margin-left: 0; /* Ensure no left margin */
+  }
+  
+  .votes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 50px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ff5722;
+  }
+  
+  .pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  .pagination button {
+	padding: 10px 15px;
+	margin: 0 5px;
+	font-size: 16px;
+	color: #333;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .pagination button:hover {
+	background-color: #ddd;
+  }
+  
+  .pagination button.active {
+	background-color: #ff5722;
+	color: white;
+  }
+  
+  .pagination button:disabled {
+	background-color: #e0e0e0;
+	color: #999;
+	cursor: not-allowed;
+  }
